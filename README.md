@@ -18,3 +18,4 @@ Simulation of planetry Motion around the Sun
 - No double buffering implemented and hence you will see animation flickering.
 - Very minimal error checking is done and so GIGO!
 - Assumes the first body in the input JSON is always the Sun.
+- Simulation speed is 100 weeks / sec. 
