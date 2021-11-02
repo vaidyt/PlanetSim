@@ -60,8 +60,8 @@ public:
 
 		// Take only 70 % of screen for our display
 		double fraction = 0.7;
-		int width = fraction * abs(X2 - X1);
-		int height = fraction * abs(Y1 - Y1);
+		int width = (int)(fraction * abs(X2 - X1));
+		int height = (int)(fraction * abs(Y1 - Y1));
 		double maxWindowDimension = std::max<double>(width, height);
 
 		for (auto& body : _bodies)
@@ -77,7 +77,7 @@ public:
 		Body::setScale(scale);
 	}
 
-	unsigned int count() const
+	size_t count() const
 	{
 		return _bodies.size();
 	}

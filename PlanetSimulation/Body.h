@@ -176,6 +176,7 @@ public:
 		// Time period of the body in seconds
 		auto TimePeriod_In_Seconds = 2 * M_PI / w;
 
+		// Simulate at 1 week per 0.01 s or 100 weeks per sec
 		auto TimePeriod_In_Weeks = TimePeriod_In_Seconds / (3600.0*24*7);
 
 		// time step

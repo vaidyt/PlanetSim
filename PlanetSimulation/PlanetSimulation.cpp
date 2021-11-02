@@ -122,7 +122,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
         {
             return FALSE;
         }
-        SetTimer(hWnd, ID_1SECOND, 1, NULL);
+        // Fire timer event every 0.01 s
+        SetTimer(hWnd, ID_1SECOND, 10, NULL);
         auto windowRectangleUniquePtr = std::unique_ptr<tagRECT>(new tagRECT());
         GetClientRect(hWnd, windowRectangleUniquePtr.get());
 
