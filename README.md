@@ -12,7 +12,7 @@ Simulation of planetry Motion around the Sun
 - "Space bar" pauses/continues (i.e. toggle) the application.
 - The letter "r" resets the application to its start point.
 
-## Assumptions
+## Assumptions and Limitations
 - This application is written using Win32 SDK and so will only run in Windows (and not in Mac or Linux).
 - Some amount of interaction with bodies other than the sun is considered (although it is crude).
 - No double buffering implemented and hence you will see animation flickering.
