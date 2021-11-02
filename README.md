@@ -17,3 +17,4 @@ Simulation of planetry Motion around the Sun
 - Some amount of interaction with bodies other than the sun is considered (although it is crude).
 - No double buffering implemented and hence you will see animation flickering.
 - Very minimal error checking is done and so GIGO!
+- Assumes the first body in the input JSON is always the Sun.
