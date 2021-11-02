@@ -8,7 +8,7 @@ Simulation of planetry Motion around the Sun
 - Alternatively, to just run the .exe, go to the release/debug folder and double click on "PlanetSimulation.exe".
 
 ## Usage instructions
-- The JSON file name is hardcoded in the application and to change the input, change the JSON and put a copy of it in the same folder as the solution.
+- The input JSON file name that defines the planetary bodies is hardcoded in the application. So, to change the input, change the JSON file name (in the code) and put a copy of it in the same folder as the solution.
 - "Space bar" pauses/continues (i.e. toggle) the application.
 - The letter "r" resets the application to its start point.
 
