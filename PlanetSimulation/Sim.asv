@@ -1,0 +1,42 @@
+function [T, dTheta] = Sim
+
+G = 6.674e-11;
+v_x = 0;
+v_y = 13060;
+v_vec = [v_x; v_y];
+v_0 = norm(v_vec);
+M_s = 1.989e30;
+M_2 = 5.6846e26;
+M_3 = 8.6810e25;
+M_4 = 10.243e25;
+M_5 = 5.972e24;
+
+AU = 150e9;
+r_1 = 5.2*AU;
+r_2 = 9.54*AU;
+r_3 = 19.18*AU;
+r_4 = 30.06*AU;
+r_e = 1.4849e+11;
+
+r_1 = r_e;
+v_0 = 0;
+
+% a = G*(M_s / r_1.^2 +  M_2 / (r_2-r_1).^2 + M_3 / (r_3-r_1).^2 + M_4 / (r_4-r_1).^2);
+a = G*(M_s / r_1.^2);
+
+
+p = [a v_0 -2*pi*r_1];
+solution = roots(p);
+
+T = solution(1);
+
+
+% T = sqrt(((360) - (v_0 / r_1)) * r_1 / a);
+
+T_in_weeks = T / (3600 * 24 * 7);
+
+T_scaled = T_in_weeks / 100;
+
+dTheta = T_scaled / (360);
+
+end
